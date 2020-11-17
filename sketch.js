@@ -20,13 +20,13 @@ function foodL() {
 }
 
 function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
+  if (key === 'a') {
     snake.setDir(-1, 0);
-  } else if (keyCode === DOWN_ARROW) {
+  } else if (key === 's') {
     snake.setDir(0,1)
-  } else if (keyCode === RIGHT_ARROW) {
+  } else if (key === 'd') {
     snake.setDir(1,0)
-  } else if (keyCode === UP_ARROW) {
+  } else if (key === 'w') {
     snake.setDir(0,-1)
   }
 }
@@ -38,7 +38,7 @@ function draw() {
     foodL();
   }
   snake.update();
-  snake.show();
+  snake.show(255,255,255);
 
   noStroke();
   fill(255, 0, 0);
