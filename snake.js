@@ -30,6 +30,8 @@ class Snake {
 
   EndGame() {
     background(255,0,0);
+    fill(255,0,0);
+    this.show(255,0,0);
     noLoop();
   }
 
@@ -66,9 +68,9 @@ class Snake {
     this.checkLocation();
   }
 
-  show() {
+  show(R,G,B) {
     noStroke();
-    fill(255,255,255);
+    fill(R,G,B);
     for (let i = 0; i < this.L; i++) {
       rect(this.body[i].x, this.body[i].y, 1,1)
     }
